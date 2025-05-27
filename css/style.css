@@ -1,89 +1,299 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Rey Crujiente - Pollo Frito Sabroso</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>El Rey Crujiente</h1>
-            <p class="tagline">¡El sabor crujiente que conquista tu paladar!</p>
-        </div>
-    </header>
+/* style.css */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
 
-    <nav class="navbar">
-        <div class="container">
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#menu">Menú</a></li>
-                <li><a href="#ubicacion">Ubicación</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h2>¡El Mejor Pollo Frito de Ensenada!</h2>
-                    <p>Crujiente por fuera, jugoso por dentro. ¡Una experiencia que te encantará!</p>
-                    <a href="#menu" class="button primary">Ver Nuestro Menú</a>
-                </div>
-                <img src="img/polloconpapas.jpg" alt="Delicioso Pollo Frito con Papas" class="hero-image">
-            </div>
-        </section>
+header {
+    /* Degradado de rojo a un naranja/rojo más oscuro */
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sutil sombra para profundidad */
+}
 
-        <section id="menu" class="menu section-padding hidden">
-            <div class="container">
-                <h2>Nuestro Menú Estelar</h2>
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <img src="img/polloconpapas.jpg" alt="Paquete Familiar">
-                        <h3>Paquete Familiar</h3>
-                        <p class="description">10 piezas de pollo, papas grandes, refresco de 2L.</p>
-                        <span class="price">$19.99</span>
-                        <a href="#" class="button secondary">Ordenar ahora</a>
-                    </div>
-                    <div class="menu-item">
-                        <img src="img/piernitaspollo.jpg" alt="Paquete Pareja">
-                        <h3>Paquete Pareja</h3>
-                        <p class="description">6 piezas de pollo, papas medianas, 2 refrescos.</p>
-                        <span class="price">$12.99</span>
-                        <a href="#" class="button secondary">Ordenar ahora</a>
-                    </div>
-                    <div class="menu-item">
-                        <img src="img/nuggetspollo.jpg" alt="Combo Individual">
-                        <h3>Combo Individual</h3>
-                        <p class="description">3 piezas de pollo, papas chicas, bebida.</p>
-                        <span class="price">$7.99</span>
-                        <a href="#" class="button secondary">Ordenar ahora</a>
-                    </div>
-                    <div class="menu-item">
-                        <img src="img/jamaica.jpg" alt="Bebida de Jamaica">
-                        <h3>Bebida de Jamaica</h3>
-                        <p class="description">Refrescante agua de flor de Jamaica.</p>
-                        <span class="price">$2.50</span>
-                        <a href="#" class="button secondary">Ordenar ahora</a>
-                    </div>
-                    <div class="menu-item">
-                        <img src="img/orchata.jpeg" alt="Bebida de Horchata">
-                        <h3>Bebida de Horchata</h3>
-                        <p class="description">Clásica y deliciosa agua de horchata.</p>
-                        <span class="price">$2.50</span>
-                        <a href="#" class="button secondary">Ordenar ahora</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5em;
+    font-weight: 700; /* Asegura que sea audaz */
+    margin-bottom: 10px;
+}
 
-        <section id="ubicacion" class="location section-padding hidden">
-            <div class="container">
-                <h2>¡Visítanos!</h2>
-                <p class="location-info
+header .tagline {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* Navbar principal */
+.navbar {
+    background-color: #333;
+    padding: 15px 0;
+}
+
+.navbar .container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.navbar .container ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar .container ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500; /* Ligeramente más delgado para un toque moderno */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Añade transición a text-shadow */
+}
+
+.navbar .container ul li a:hover {
+    color: #f39c12; /* Un naranja vibrante para el hover */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Efecto de sombra para el texto */
+}
+
+main {
+    padding: 20px 0;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.hero {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+    margin-bottom: 40px;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.hero-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8em;
+    font-weight: 600; /* Un poco más ligero para un toque moderno */
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 40%;
+    height: auto;
+    border-radius: 15px; /* Más redondeado */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada pero suave */
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Más suave */
+}
+
+.button.primary {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.button.primary:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px); /* Un leve levantamiento */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.button.secondary {
+    background-color: #333;
+    color: white;
+}
+
+.button.secondary:hover {
+    background-color: #555;
+    transform: translateY(-2px); /* Un leve levantamiento */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.menu {
+    background-color: #fff;
+}
+
+.menu h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.menu-item {
+    background-color: #f9f9f9;
+    border-radius: 15px; /* Más redondeado */
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra más suave y extendida */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para hover */
+}
+
+.menu-item:hover { /* Nuevo: efecto al pasar el ratón */
+    transform: translateY(-5px); /* Pequeño levantamiento */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra más intensa al levantar */
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.menu-item .description {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin: 15px 20px 5px 20px;
+    font-size: 1.4em;
+}
+
+.menu-item .price {
+    display: block;
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0 20px 15px 20px;
+}
+
+.menu-item .button.secondary {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+.location {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.location h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.location-info {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.location-info a {
+    color: #e74c3c;
+}
+
+.contact {
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.phone-number a {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* Estilos para animación de entrada al hacer scroll */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .hero-image {
+        max-width: 80%;
+    }
+    .navbar .container ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
