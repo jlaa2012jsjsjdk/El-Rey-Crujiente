@@ -1,33 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Rey Crujiente - Paquetes de Pollo</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Rey Crujiente - Paquetes de Pollo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
 
-        body {
-            background-color: #FFF5E1;
-            padding-bottom: 50px;
-        }
+    body {
+      background-color: #fffdf7;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        .header {
-            background-color: #D32F2F;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
+    header {
+      background-color: #D32F2F;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
 
-        .header h1 {
-            margin-bottom: 10px;
-        }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
 
-        .paquetes-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    .paquetes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .paquete {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .paquete:hover {
+      transform: translateY(-5px);
+    }
+
+    .paquete img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .paquete-content {
+      padding: 20px;
+    }
+
+    .paquete-content h2 {
+      color: #D32F2F;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .paquete-content p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    .paquete-content a {
+      display: inline-block;
+      background-color: #D32F2F;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>El Rey Crujiente</h1>
+    <p>¡Los mejores paquetes de pollo al mejor precio!</p>
+  </header>
+
+  <section class="paquetes">
+    <div class="paquete">
+      <img src="https://images.unsplash.com/photo-1605478371331-1d1b3e5b13e9" alt="Paquete Familiar">
+      <div class="paquete-content">
+        <h2>Paquete Familiar</h2>
+        <p>10 piezas de pollo, papas grandes, refresco de 2L.</p>
+        <a href="#">Ordenar ahora</a>
+      </div>
+    </div>
+
+    <div class="paquete">
+      <img src="https://images.unsplash.com/photo-1631515243348-7307eea36cf0" alt="Paquete Pareja">
+      <div class="paquete-content">
+        <h2>Paquete Pareja</h2>
+        <p>6 piezas de pollo, papas medianas, 2 refrescos.</p>
+        <a href="#">Ordenar ahora</a>
+      </div>
+    </div>
+
+    <div class="paquete">
+      <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb36" alt="Combo Individual">
+      <div class="paquete-content">
+        <h2>Combo Individual</h2>
+        <p>3 piezas de pollo, papas chicas, bebida.</p>
+        <a href="#">Ordenar ahora</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 El Rey Crujiente. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
