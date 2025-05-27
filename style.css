@@ -1,0 +1,159 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    background-color: #f7f0e8; /* Un color crema claro para el fondo */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Header --- */
+header {
+    background-color: #d92323; /* Rojo fuerte */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content h1 {
+    font-family: 'Bangers', cursive; /* Fuente más divertida para el título */
+    font-size: 3.5em; /* Tamaño grande para el título */
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-content p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* --- Main Content - Packages Section --- */
+.packages-section {
+    display: flex; /* Para que las tarjetas se pongan en línea */
+    flex-wrap: wrap; /* Para que las tarjetas salten de línea en pantallas pequeñas */
+    justify-content: center; /* Centrar las tarjetas */
+    gap: 30px; /* Espacio entre las tarjetas */
+    padding: 40px 20px;
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+.package-card {
+    background-color: #ffffff; /* Fondo blanco para las tarjetas */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    width: 300px; /* Ancho fijo para cada tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave al pasar el mouse */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Para que el botón quede abajo */
+}
+
+.package-card:hover {
+    transform: translateY(-5px); /* Pequeño levantamiento al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.package-card img {
+    max-width: 100%;
+    height: 180px; /* Altura fija para las imágenes */
+    object-fit: contain; /* Para que la imagen se ajuste sin cortarse */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.package-card h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 2em;
+    color: #d92323;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.package-card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.package-card .price {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #e67e22; /* Un naranja para el precio */
+    margin-bottom: 20px;
+}
+
+.order-button {
+    display: inline-block;
+    background-color: #28a745; /* Verde para el botón de ordenar */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Empuja el botón hacia abajo */
+}
+
+.order-button:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el mouse */
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #333; /* Gris oscuro para el footer */
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.9em;
+    margin-top: 50px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #d92323; /* Rojo de la marca al pasar el mouse */
+}
+
+/* --- Responsive Design (para que se vea bien en celulares) --- */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2.5em;
+    }
+
+    .packages-section {
+        flex-direction: column; /* Apila las tarjetas en pantallas pequeñas */
+        align-items: center; /* Centra las tarjetas apiladas */
+    }
+
+    .package-card {
+        width: 85%; /* Las tarjetas ocupan más ancho en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 2em;
+    }
+    .header-content p {
+        font-size: 1em;
+    }
+    .package-card {
+        padding: 15px;
+    }
+    .package-card h2 {
+        font-size: 1.8em;
+    }
+    .order-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
