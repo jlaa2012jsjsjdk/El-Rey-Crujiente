@@ -1,48 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>El Rey Crujiente - Paquetes de Pollo</title>
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Rey Crujiente - Pollo Frito Sabroso</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>El Rey Crujiente</h1>
-    <p>¡Los mejores paquetes de pollo al mejor precio!</p>
-  </header>
+    <header>
+        <div class="container">
+            <h1>El Rey Crujiente</h1>
+            <p class="tagline">¡El sabor crujiente que conquista tu paladar!</p>
+        </div>
+    </header>
 
-  <section class="paquetes">
-    <div class="paquete">
-      <img src="https://images.unsplash.com/photo-1605478371331-1d1b3e5b13e9" alt="Paquete Familiar">
-      <div class="paquete-content">
-        <h2>Paquete Familiar</h2>
-        <p>10 piezas de pollo, papas grandes, refresco de 2L.</p>
-        <a href="#">Ordenar ahora</a>
-      </div>
-    </div>
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="paquete">
-      <img src="https://images.unsplash.com/photo-1631515243348-7307eea36cf0" alt="Paquete Pareja">
-      <div class="paquete-content">
-        <h2>Paquete Pareja</h2>
-        <p>6 piezas de pollo, papas medianas, 2 refrescos.</p>
-        <a href="#">Ordenar ahora</a>
-      </div>
-    </div>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>¡El Mejor Pollo Frito de Tijuana!</h2>
+                    <p>Crujiente por fuera, jugoso por dentro. ¡Una experiencia que te encantará!</p>
+                    <a href="#menu" class="button primary">Ver Nuestro Menú</a>
+                </div>
+                <img src="img/polloconpapas.jpg" alt="Delicioso Pollo Frito con Papas" class="hero-image">
+            </div>
+        </section>
 
-    <div class="paquete">
-      <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb36" alt="Combo Individual">
-      <div class="paquete-content">
-        <h2>Combo Individual</h2>
-        <p>3 piezas de pollo, papas chicas, bebida.</p>
-        <a href="#">Ordenar ahora</a>
-      </div>
-    </div>
-  </section>
+        <section id="menu" class="menu section-padding">
+            <div class="container">
+                <h2>Nuestro Menú Estelar</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="img/polloconpapas.jpg" alt="Paquete Familiar">
+                        <h3>Paquete Familiar</h3>
+                        <p class="description">10 piezas de pollo, papas grandes, refresco de 2L.</p>
+                        <span class="price">$19.99</span>
+                        <a href="#" class="button secondary">Ordenar ahora</a>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/piernitaspollo.jpg" alt="Paquete Pareja">
+                        <h3>Paquete Pareja</h3>
+                        <p class="description">6 piezas de pollo, papas medianas, 2 refrescos.</p>
+                        <span class="price">$12.99</span>
+                        <a href="#" class="button secondary">Ordenar ahora</a>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/nuggetspollo.jpg" alt="Combo Individual">
+                        <h3>Combo Individual</h3>
+                        <p class="description">3 piezas de pollo, papas chicas, bebida.</p>
+                        <span class="price">$7.99</span>
+                        <a href="#" class="button secondary">Ordenar ahora</a>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/jamaica.jpg" alt="Bebida de Jamaica">
+                        <h3>Bebida de Jamaica</h3>
+                        <p class="description">Refrescante agua de flor de Jamaica.</p>
+                        <span class="price">$2.50</span>
+                        <a href="#" class="button secondary">Ordenar ahora</a>
+                    </div>
+                    <div class="menu-item">
+                        <img src="img/orchata.jpeg" alt="Bebida de Horchata">
+                        <h3>Bebida de Horchata</h3>
+                        <p class="description">Clásica y deliciosa agua de horchata.</p>
+                        <span class="price">$2.50</span>
+                        <a href="#" class="button secondary">Ordenar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <p>&copy; 2025 El Rey Crujiente. Todos los derechos reservados.</p>
-  </footer>
+        <section id="ubicacion" class="location section-padding">
+            <div class="container">
+                <h2>¡Visítanos!</h2>
+                <p class="location-info">Estamos ubicados en <a href="https://www.google.com/maps/place/Tijuana,+Baja+California,+Mexico" target="_blank">Tijuana, Baja California, México</a>. ¡Ven a disfrutar de nuestro delicioso pollo frito!</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact section-padding">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <p>¿Tienes alguna pregunta o quieres hacer un pedido? ¡Llámanos!</p>
+                <p class="phone-number"><a href="tel:+52664XXXXXXX">Teléfono: +52 664 XXX XXXX</a> (Reemplaza con tu número)</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 El Rey Crujiente. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
