@@ -32,7 +32,7 @@
         <section id="inicio" class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h2>¡El Mejor Pollo Frito de Tijuana!</h2>
+                    <h2>¡El Mejor Pollo Frito de Ensenada!</h2>
                     <p>Crujiente por fuera, jugoso por dentro. ¡Una experiencia que te encantará!</p>
                     <a href="#menu" class="button primary">Ver Nuestro Menú</a>
                 </div>
@@ -40,7 +40,7 @@
             </div>
         </section>
 
-        <section id="menu" class="menu section-padding">
+        <section id="menu" class="menu section-padding hidden">
             <div class="container">
                 <h2>Nuestro Menú Estelar</h2>
                 <div class="menu-grid">
@@ -83,26 +83,46 @@
             </div>
         </section>
 
-        <section id="ubicacion" class="location section-padding">
+        <section id="ubicacion" class="location section-padding hidden">
             <div class="container">
                 <h2>¡Visítanos!</h2>
-                <p class="location-info">Estamos ubicados en <a href="El Maneadero Parte Baja, 22790 Rodolfo Sánchez Taboada, B.C." target="_blank">Maneadero, Ensenada Baja California</a>. ¡Ven a disfrutar de nuestro delicioso pollo frito!</p>
+                <p class="location-info">Estamos ubicados en <a href="https://www.google.com/maps/place/Maneadero,+Ensenada,+B.C./" target="_blank">Maneadero, Ensenada, B.C.</a> ¡Ven a disfrutar de nuestro delicioso pollo frito!</p>
             </div>
         </section>
 
-        <section id="contacto" class="contact section-padding">
+        <section id="contacto" class="contact section-padding hidden">
             <div class="container">
                 <h2>Contáctanos</h2>
-                <p>¿Tienes alguna pregunta o quieres hacer un pedido? ¡Llámanos!</p>
-                <p class="phone-number"><a href="tel:+526461945958">Teléfono: +52 646 194 5958</a> </p>
+                <p>¿Tienes alguna pregunta o quieres hacer un pedido? ¡Contáctanos por WhatsApp!</p>
+                <p class="phone-number"><a href="https://wa.me/526461945958" target="_blank">WhatsApp: +52 646 194 5958</a></p>
+                <p>(Solo por WhatsApp)</p>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 El Rey Crujiente. Todos los derechos reservados.</p>
+            <p>© 2024 El Rey Crujiente. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target); // Dejar de observar una vez que se ha animado
+                    }
+                });
+            }, {
+                threshold: 0.1 // % del elemento visible para activar
+            });
+
+            document.querySelectorAll('.hidden').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
