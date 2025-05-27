@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Rey Crujiente - Pollo Frito Sabroso</title>
-    <link rel="stylesheet" href="css/style.css"> 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -22,7 +21,7 @@
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#menu">Menú</a></li>
-                <li><a href="#ubicacion">Ubicación</a></li>
+                <li><a href="#carrito-section">Carrito</a></li> <li><a href="#ubicacion">Ubicación</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
@@ -43,42 +42,55 @@
         <section id="menu" class="menu section-padding hidden">
             <div class="container">
                 <h2>Nuestro Menú Estelar</h2>
-                <div class="menu-grid">
+                <div class="menu-grid" id="productos-grid">
                     <div class="menu-item">
                         <img src="img/polloconpapas.jpg" alt="Paquete Familiar">
                         <h3>Paquete Familiar</h3>
                         <p class="description">10 piezas de pollo, papas grandes, refresco de 2L.</p>
-                        <span class="price">$19.99</span>
-                        <a href="#" class="button secondary">Ordenar ahora</a>
+                        <span class="price" data-price="350.00">$350.00</span>
+                        <button class="button secondary add-to-cart" data-id="paquete-familiar" data-nombre="Paquete Familiar" data-imagen="img/polloconpapas.jpg">Agregar al Carrito</button>
                     </div>
                     <div class="menu-item">
                         <img src="img/piernitaspollo.jpg" alt="Paquete Pareja">
                         <h3>Paquete Pareja</h3>
                         <p class="description">6 piezas de pollo, papas medianas, 2 refrescos.</p>
-                        <span class="price">$12.99</span>
-                        <a href="#" class="button secondary">Ordenar ahora</a>
+                        <span class="price" data-price="250.00">$250.00</span>
+                        <button class="button secondary add-to-cart" data-id="paquete-pareja" data-nombre="Paquete Pareja" data-imagen="img/piernitaspollo.jpg">Agregar al Carrito</button>
                     </div>
                     <div class="menu-item">
                         <img src="img/nuggetspollo.jpg" alt="Combo Individual">
                         <h3>Combo Individual</h3>
                         <p class="description">3 piezas de pollo, papas chicas, bebida.</p>
-                        <span class="price">$7.99</span>
-                        <a href="#" class="button secondary">Ordenar ahora</a>
+                        <span class="price" data-price="120.00">$120.00</span>
+                        <button class="button secondary add-to-cart" data-id="combo-individual" data-nombre="Combo Individual" data-imagen="img/nuggetspollo.jpg">Agregar al Carrito</button>
                     </div>
                     <div class="menu-item">
                         <img src="img/jamaica.jpg" alt="Bebida de Jamaica">
                         <h3>Bebida de Jamaica</h3>
                         <p class="description">Refrescante agua de flor de Jamaica.</p>
-                        <span class="price">$2.50</span>
-                        <a href="#" class="button secondary">Ordenar ahora</a>
+                        <span class="price" data-price="30.00">$30.00</span>
+                        <button class="button secondary add-to-cart" data-id="bebida-jamaica" data-nombre="Bebida de Jamaica" data-imagen="img/jamaica.jpg">Agregar al Carrito</button>
                     </div>
                     <div class="menu-item">
                         <img src="img/orchata.jpeg" alt="Bebida de Horchata">
                         <h3>Bebida de Horchata</h3>
                         <p class="description">Clásica y deliciosa agua de horchata.</p>
-                        <span class="price">$2.50</span>
-                        <a href="#" class="button secondary">Ordenar ahora</a>
+                        <span class="price" data-price="30.00">$30.00</span>
+                        <button class="button secondary add-to-cart" data-id="bebida-horchata" data-nombre="Bebida de Horchata" data-imagen="img/orchata.jpeg">Agregar al Carrito</button>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="carrito-section" class="section-padding hidden">
+            <div class="container">
+                <h2>Tu Carrito de Compras</h2>
+                <div id="carrito-items">
+                    <p id="carrito-vacio-mensaje">Tu carrito está vacío.</p>
+                </div>
+                <div class="carrito-resumen">
+                    <p>Total: $<span id="carrito-total">0.00</span></p>
+                    <button id="proceder-pago" class="button primary" disabled>Proceder al Pago</button>
                 </div>
             </div>
         </section>
@@ -86,7 +98,7 @@
         <section id="ubicacion" class="location section-padding hidden">
             <div class="container">
                 <h2>¡Visítanos!</h2>
-                <p class="location-info">Estamos ubicados en <a href="https://www.google.com/maps/place/Maneadero,+Ensenada,+B.C./" target="_blank">Maneadero, Ensenada, B.C.</a> ¡Ven a disfrutar de nuestro delicioso pollo frito!</p>
+                <p class="location-info">Estamos ubicados en <a href="https://www.google.com/maps/place/Maneadero,+Ensenada,+B.C./data=!4m2!3m1!1s0x80d88d227b9a528f:0x39a9c6c5185d0d82?sa=X&ved=1t:242&ictx=111" target="_blank">Maneadero, Ensenada, B.C.</a> ¡Ven a disfrutar de nuestro delicioso pollo frito!</p>
             </div>
         </section>
 
@@ -124,5 +136,5 @@
             });
         });
     </script>
-</body>
+    <script src="js/script.js"></script> </body>
 </html>
